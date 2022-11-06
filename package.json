@@ -2,9 +2,9 @@
   "name": "2022_node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app",
     "dev": "nodemon --ignore feedback.json Modelo.js",
     "devApp": "nodemon --ignore feedback.json app.js"
   },

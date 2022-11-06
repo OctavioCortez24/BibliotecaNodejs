@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 
-const port = 3000;//Asigno el puerto
+const port = process.env.PORT || 3000;//Asigno el puerto
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
