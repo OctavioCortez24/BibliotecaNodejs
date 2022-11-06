@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "\"echo \\\"Erro: no test specified\\\" && exit 1\"",
+    "start": "node app.js",
     "dev": "nodemon --ignore feedback.json Modelo.js",
     "devApp": "nodemon --ignore feedback.json app.js"
   },
