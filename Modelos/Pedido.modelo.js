@@ -94,7 +94,7 @@ function guardarDatosEnJson(){
         } else {
             console.log('Escritura existosa')
         }
-    });
+    }); 
 } 
  
 
