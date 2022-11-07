@@ -82,7 +82,7 @@ modelo.actualizarDisponibilidadLibroDevuelto= (libroDevuelto) => {
 
 function guardarDatosEnJson(){
     var librosString = JSON.stringify(libros);
-    fs.writeFile('./Archivos/Para_Guardar/Libros.json', librosString, (error) => {
+    fs.writeFile('./Archivos/Para_Guardar/Libros.txt', librosString, (error) => {
 
         if (error) {
             console.log('No se puede escribir en archivos');
