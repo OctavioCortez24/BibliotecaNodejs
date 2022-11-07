@@ -66,7 +66,7 @@ function guardarDatosEnJson() {
     //lo hice funcion porque ocupo el mismo codigo varias veces
     
 
-    fs.writeFileSync('./Archivos/Para_Guardar/Socios.json', JSON.stringify(socios), (error) => {
+    fs.writeFileSync('https://github.dev/OctavioCortez24/BibliotecaNodejs/blob/main/Archivos/Para_Guardar/Pedidos.json', JSON.stringify(socios), (error) => {
         if (error) {
             console.log('No se puede escribir en archivos');
         } else {
