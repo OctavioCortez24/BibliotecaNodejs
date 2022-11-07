@@ -7,7 +7,7 @@ const Clases = require('../Clases');
 var socios = [];//Array de Socios
 
 try {
-    var contenido = fs.readFileSync('./Archivos/Para_Guardar/Socios.txt', 'utf-8');
+    var contenido = fs.readFileSync('./Archivos/Para_Guardar/Socios.json', 'utf-8');
     socios = JSON.parse(contenido);
 } catch (erroSocios) {
     console.log("No se pudo cargar a los socios");
@@ -33,7 +33,7 @@ modelo.guardarSocio = (atributos) => {
         
         socios.push(so1);
 
-        guardarDatosEnTxt();//Guardo los datos en txt con esta funcion
+        guardarDatosEnJson();//Guardo los datos en txt con esta funcion
 
     } else {
        
@@ -58,20 +58,20 @@ modelo.darDeBajaSocio = (socioAtributos) => {
         }
 
     }
-    guardarDatosEnTxt();
+    guardarDatosEnJson();
 }
 
-function guardarDatosEnTxt() {
+function guardarDatosEnJson() {
     //Esta funcion se encarga de guardar el array de socios en txt, 
     //lo hice funcion porque ocupo el mismo codigo varias veces
-    var sociosString = JSON.stringify(socios);
+    
 
-    fs.writeFileSync('./Archivos/Para_Guardar/Socios.txt', sociosString, (error) => {
+    fs.writeFileSync('./Archivos/Para_Guardar/Socios.json', JSON.stringify(socios), (error) => {
         if (error) {
             console.log('No se puede escribir en archivos');
         } else {
             console.log('Escritura existosa')
-        }
+        } 
     });
 }
 

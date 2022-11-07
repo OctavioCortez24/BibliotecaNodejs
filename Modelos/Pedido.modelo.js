@@ -8,10 +8,10 @@ var pedidos = [];//Array de pedidos
 
 //Cargo los pedidos que se encuentran en el archivo txt
 try {
-    var contenidoPedido = fs.readFileSync('./Archivos/Para_Guardar/Pedidos.txt', 'utf-8');
+    var contenidoPedido = fs.readFileSync('./Archivos/Para_Guardar/Pedidos.json', 'utf-8');
     pedidos = JSON.parse(contenidoPedido);
 } catch (errorPedido) {
-    console.log("No se pudo parcear el contenido del archivo Pedido.txt")
+    console.log("No se pudo parcear el contenido del archivo Pedido.json")
     pedidos = [];
 }
 
@@ -57,15 +57,8 @@ modelo.guardarPedido = (atributosPedido) => {
     var pedido = new Clases.Pedido(fechaPrestamo, fechaDevolucion, libro, socio, fechaReintegro);
 
     pedidos.push(pedido);//Añado el pedido nuevo al Array
-    var pedidosString = JSON.stringify(pedidos);//Convierto el array de Pedidos en String
-
-    fs.writeFileSync('./Archivos/Para_Guardar/Pedidos.txt', pedidosString, (error) => {
-        if (error) {
-            console.log('No se puede escribir en archivos');
-        } else {
-            console.log('Escritura existosa')
-        }
-    });
+   
+    guardarDatosEnJson();
 }
 
 modelo.enviarPedidos = () => {
@@ -88,20 +81,22 @@ modelo.devolverLibro = (atributosLibro) => {
         if (pedidos[i].Libro.titulo == libroDevuelto.titulo & pedidos[i].fechaReintegro == null) {
             pedidos[i].fechaReintegro=fechaReintegro; 
         }
-    }
+    }   
+    guardarDatosEnJson();
+}
 
+function guardarDatosEnJson(){
     var pedidosString = JSON.stringify(pedidos);
 
-    fs.writeFileSync('./Archivos/Para_Guardar/Pedidos.txt', pedidosString, (error) => {
+    fs.writeFileSync('./Archivos/Para_Guardar/Pedidos.json', pedidosString, (error) => {
         if (error) {
             console.log('No se puede escribir en archivos');
         } else {
             console.log('Escritura existosa')
         }
-    });   
-
+    });
 }
-
+ 
 
 //-----
 

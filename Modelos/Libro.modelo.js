@@ -7,10 +7,10 @@ var libros = [];//Array de Libros
 
 //Cargo los libros que se encuentran en el archivo txt
 try {
-    var contenidoLibro = fs.readFileSync('./Archivos/Para_Guardar/Libros.txt', 'utf-8');
+    var contenidoLibro = fs.readFileSync('./Archivos/Para_Guardar/Libros.json', 'utf-8');
     libros = JSON.parse(contenidoLibro);
 } catch (error) {
-    console.log("No se pudo parcear el contenido de Libros.txt")
+    console.log("No se pudo parcear el contenido de Libros.json")
     libros = [];
 }
 
@@ -29,7 +29,7 @@ modelo.guardarLibro = (atributosLibro) => {
     
     if(!validacion){
         libros.push(libro);//Añado el libro al array de libros
-        guardarDatosEnTxt();
+        guardarDatosEnJson();
     }else{
         console.log("Ya existe uno Igual")
     }
@@ -52,7 +52,7 @@ modelo.darDeBajaLibro = (libroAtributos) => {
             break;
         }
     }
-    guardarDatosEnTxt();
+    guardarDatosEnJson();
 }
 
 
@@ -66,7 +66,7 @@ modelo.actualizarDisponibilidadLibro=(libro)=> {
         }
     }
 
-   guardarDatosEnTxt();
+   guardarDatosEnJson();
 }
 
 modelo.actualizarDisponibilidadLibroDevuelto= (libroDevuelto) => {
@@ -77,12 +77,12 @@ modelo.actualizarDisponibilidadLibroDevuelto= (libroDevuelto) => {
             break;
         }
     }
-    guardarDatosEnTxt();
+    guardarDatosEnJson();
 }
 
-function guardarDatosEnTxt(){
+function guardarDatosEnJson(){
     var librosString = JSON.stringify(libros);
-    fs.writeFile('./Archivos/Para_Guardar/Libros.txt', librosString, (error) => {
+    fs.writeFile('./Archivos/Para_Guardar/Libros.json', librosString, (error) => {
 
         if (error) {
             console.log('No se puede escribir en archivos');
