@@ -82,7 +82,7 @@ modelo.actualizarDisponibilidadLibroDevuelto= (libroDevuelto) => {
 
 function guardarDatosEnTxt(){
     var librosString = JSON.stringify(libros);
-    fs.writeFile('./Archivos/Para_Guardar/Libros.txt', librosString, (error) => {
+    fs.writeFile('https://github.com/OctavioCortez24/BibliotecaNodejs/edit/main/Archivos/Para_Guardar/Socios.txt', librosString, (error) => {
 
         if (error) {
             console.log('No se puede escribir en archivos');
