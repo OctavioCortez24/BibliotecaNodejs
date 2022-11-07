@@ -28,7 +28,7 @@
     
     <div class="container" align="Center">
         <h1 class="display-5" align="Center">Devolver un libro</h1>
-        <form action="http://localhost:3000/Devolver-un-libroPost" method="post">
+        <form action="https://biblioteca-tp6.herokuapp.com/Devolver-un-libroPost" method="post">
             <div class="mb-3">
                 <p>
                     <div id="SelectLibros"></div>
@@ -45,7 +45,7 @@
 
 
     <script>
-        let urlLibro = 'http://localhost:3000/VerLibrosTabla';
+        let urlLibro = 'https://biblioteca-tp6.herokuapp.com/VerLibrosTabla';
        fetch(urlLibro)
            .then(res => res.json())
            .then(libros => mostrarLibro(libros))

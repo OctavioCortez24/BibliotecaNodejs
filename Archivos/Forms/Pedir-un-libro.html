@@ -30,7 +30,7 @@
 
     <div class="container" align="Center">
         <h1 class="display-5" align="Center">Pedir un Libro</h1>
-        <form action="http://localhost:3000/Pedir-un-libro-Post" method="post">
+        <form action="https://biblioteca-tp6.herokuapp.com/Pedir-un-libro-Post" method="post">
 
             <div class="mb-3">
                 <p>
@@ -54,7 +54,7 @@
 
     <script>
         //--------------Cargo los Socios en un Select------------------------
-        let url = 'http://localhost:3000/VerSociosTabla';
+        let url = 'https://biblioteca-tp6.herokuapp.com/VerSociosTabla';
         fetch(url)
             .then(response => response.json())
             .then(socios => mostrarData(socios))
@@ -78,7 +78,7 @@
 
         //--------------Cargo los libros en un Select------------------------
 
-        let urlLibro = 'http://localhost:3000/VerLibrosTabla';
+        let urlLibro = 'https://biblioteca-tp6.herokuapp.com/VerLibrosTabla';
         fetch(urlLibro)
             .then(res => res.json())
             .then(libros => mostrarLibro(libros))

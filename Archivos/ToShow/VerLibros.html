@@ -50,7 +50,7 @@
 
 
     <script>
-        let url = 'http://localhost:3000/VerLibrosTabla';
+        let url = 'https://biblioteca-tp6.herokuapp.com/VerLibrosTabla';
         fetch(url)
             .then(response => response.json())
             .then(libros => mostrarData(libros))
