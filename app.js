@@ -21,7 +21,7 @@ app.use(require('./Routes/pedido.routes.js'))//Llamo a las rutas de todas las fu
 //Menu------------------------------------
 app.get('/', (request, response) => {
     
-    response.render('menu', {titulo:"Biblioteca"})
+    response.render('./Menu/menu', {titulo:"Biblioteca"})
 
 });  
 //----------------------------------------

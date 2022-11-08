@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <%- include('../template/headerPlantilla') %>
+    </head>
+    <body>
+        <%- include('../template/barraNavegacion') %>
+        <div class="container" align="Center">
+            <h1 class="display-5" align="Center">Devolver un libro</h1>
+            <form action="http://localhost:3000/Devolver-un-libroPost" method="post">
+                <div class="mb-3">
+                    <p>
+                        <select class='form-select' aria-label='Default select example' name='libro' required>
+                            <option selected value=''>Seleccionar un Libro</option>
+                            <%- libros %>
+                        </select>
+                    </p>
+                </div>
+        
+                <input type="submit" class="btn btn-outline-secondary" value="Enviar">
+            </form>
+        </div>
+    </body>
+</html>

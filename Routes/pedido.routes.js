@@ -4,8 +4,6 @@ const controlador= require('../Controladores/pedido.controlador')
 
 //Mostrar datos----------------------------------Inicio
 router.get('/Mostrar-Pedidos', controlador.mostrarPedidos);
-
-router.get('/Mostrar-PedidosTabla', controlador.mostrarPedidosTabla);
 //Mostrar datos----------------------------------Fin
 
 
