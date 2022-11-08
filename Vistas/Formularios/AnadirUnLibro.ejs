@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <%- include('../template/headerPlantilla') %>
+    </head>
+    <body>
+        <%- include('../template/barraNavegacion') %>
+        <div class="container" align="center">
+            <h1 class="display-5">Añadir un libro</h1>
+            <form action="http://localhost:3000/AnadirUnLibroPost" method="post">
+    
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Ingrese el titulo" name="titulo" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Ingrese el nombre del autor" name="nombreAutor" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Ingrese la categoria" name="categoria" required>
+                </div>
+        
+                <input type="submit" class="btn btn-outline-secondary" value="Enviar">
+            </form>
+        </div>
+    </body>
+</html>

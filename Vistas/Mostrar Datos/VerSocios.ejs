@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <%- include('../template/headerPlantilla') %>
+    </head>
+    <body>
+        <%- include('../template/barraNavegacion') %>
+
+        <h1 class="display-5" align="Center">Mostrar Socios</h1>
+
+    <div class="container2">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Desactivado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%- socios %>
+            </tbody>
+        </table>
+    </div>
+
+    </body>
+</html>

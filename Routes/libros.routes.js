@@ -23,7 +23,6 @@ router.post('/Dar-de-baja-un-LibroPost', controlador.darDeBajaPost);
 //Mostrar Libros------------------------------Inicio
 router.get('/VerLibros', controlador.verLibros);
 
-router.get('/VerLibrosTabla', controlador.verLibrosTabla);
 //Mostrar Libros------------------------------Fin
 
 

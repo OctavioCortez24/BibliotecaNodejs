@@ -1,39 +1,50 @@
-const path = require('path');
-const controlador={};//<----Objeto
+
+const controlador = {};//<----Objeto
 const modelo = require('../Modelos/Libro.modelo');//Importo las funciones del archivo Libro.modelo.js
 
-controlador.anadirLibro= (request, response) => {
+controlador.anadirLibro = (request, response) => {
     //Envio el formulario para añadir un socio
-    response.sendFile(path.join(__dirname, '../Archivos/Forms/AnadirUnLibro.html'))
+    response.render('./Formularios/AnadirUnLibro',{titulo:"Añadir un libro"})
 
 }
-controlador.anadirLibroPost=(request, response) => {
+controlador.anadirLibroPost = (request, response) => {
     //Recibe los atributos del socio
     modelo.guardarLibro(request.body);
     response.redirect('/AnadirUnLibro');
 
 }
-controlador.darDeBaja=(request, response) => {
+controlador.darDeBaja = (request, response) => {
     //Envio el html de Dar de baja
-    response.sendFile(path.join(__dirname, '../Archivos/Dar de Baja/Dar-de-baja-un-Libro.html'))
+    var libros = modelo.enviarLibros();//Traigo el array de libros desde el archivo Modelo
+    var striLibrosSelect = "";
+    //Empiezo a construir el Select
+    for (var i = 0; i < libros.length; i++) {
+        if (!libros[i].desactivado) {
+            striLibrosSelect += "<option value='" + JSON.stringify(libros[i]) + "'>" + libros[i].titulo + "</option>";
+        }
+    }
+    response.render('Dar de Baja/Dar-de-baja-un-libro', { titulo: 'Dar de baja un libro',libros:striLibrosSelect });
 }
-controlador.darDeBajaPost=(request, response) => {
+controlador.darDeBajaPost = (request, response) => {
 
     modelo.darDeBajaLibro(request.body.libro);//Envio los atriubtos del libro que se seleciono
     response.redirect('/Dar-de-baja-un-Libro');
 }
-controlador.verLibros=(request, response) => {
+controlador.verLibros = (request, response) => {
+    var libros= modelo.enviarLibros();
+    var striTable = "";
+    var estadoLibro = "";
+    var disponibilidad = "";
+    for (var i = 0; i < libros.length; i++) {
+        estadoLibro = libros[i].desactivado ? "Desactivado" : "Activado";
+        disponibilidad = libros[i].disponible ? "Disponible" : "No Disponible"
+        striTable += "<tr class='table-secondary' ><td>" + libros[i].titulo + "</td><td>" + libros[i].nombreAutor + "</td><td>" + libros[i].categoria + "</td><td>" + disponibilidad + "</td><td>" + estadoLibro + "</td></tr>";
+    }
 
-    response.sendFile(path.join(__dirname, '../Archivos/ToShow/VerLibros.html'))
+    response.render('./Mostrar Datos/VerLibros',{titulo:'Ver libros', libros:striTable})
 
 }
 
-controlador.verLibrosTabla=(request, response) => {
-
-    var libros=modelo.enviarLibros();//Traigo el array de libros desde el archivo Modelo
-    response.send(libros);
-
-}
 
 
 

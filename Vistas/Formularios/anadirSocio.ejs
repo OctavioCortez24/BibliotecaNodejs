@@ -1,0 +1,36 @@
+
+<html>
+
+<head>
+    <%- include('../template/headerPlantilla') %>
+</head>
+<body>
+    <%- include('../template/barraNavegacion') %>
+
+    <div class="container" align="center">
+        <h1 class="display-5">Añadir un Socio</h1>
+        <form action="http://localhost:3000/AnadirUnSocioPost" method="post">
+    
+            <div class="mb-3">
+                <p>
+                    <input type="text" class="form-control" name="name" placeholder="Ingrese el nombre" required>
+                </p>
+            </div>
+    
+            <div class="mb-3">
+                <p>
+                    <input type="text" class="form-control" name="surname" placeholder="Ingrese el Apellido" required>
+                </p>
+            </div>
+    
+            <div class="mb-3">
+                <p>
+                    <input type="number" class="form-control" name="dni" placeholder="Ingrese el DNI" required>
+                </p>
+            </div>
+            <input type="submit" class="btn btn-outline-secondary" value="Enviar">
+        </form>
+    </div>
+    
+</body>
+</html>

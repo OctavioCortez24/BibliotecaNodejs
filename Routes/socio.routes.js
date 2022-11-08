@@ -14,7 +14,6 @@ router.post('/AnadirUnSocioPost', controlador.anadirSocioPost);
 //Mostrar datos----------------------------------Inicio
 router.get('/VerSocios', controlador.verSocios);
 
-router.get('/VerSociosTabla', controlador.verSociosTabla);
 //Mostrar datos----------------------------------Fin
 
 

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <%- include('../template/headerPlantilla') %>
+    </head>
+
+    <body>
+        <%- include('../template/barraNavegacion') %>
+        <div class="container" align="Center">
+            <h1 class="display-5" align="Center">Dar de baja un Socio</h1>
+    
+            <form action="http://localhost:3000/Dar-de-baja-un-SocioPost" method="post">
+                <div class="mb-3">
+                    <p>
+
+                        <select class='form-select' aria-label='Default select example' name='socio' required>
+                            <option selected value=''>Seleccionar un socio</option>
+                            <%- socios %>
+                        </select>
+                    </p>
+                </div>
+        
+                <input type="submit" class="btn btn-outline-secondary" value="Enviar">
+            </form>
+        </div>
+
+    </body>
+</html>
