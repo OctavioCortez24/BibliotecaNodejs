@@ -70,8 +70,9 @@ modelo.darDeBajaSocio = (socioAtributos) => {
 
     for (var i = 0; i < socios.length; i++) {
         if (socios[i].name == socio.name & socios[i].apellido == socio.apellido & socios[i].dNI == socio.dNI) {
-            socios[i].desactivado = true;//Asigno el nuevo valor al atributo desactivado
-            socio.desactivado=true;
+            
+            socio.desactivado=true;//Asigno el nuevo valor al atributo desactivado
+            socios[i]=socio;
 
             numeroCeldaFilaSocio=i+1;//Obtengo el numero de la fila en la cual se encuentra
             break;

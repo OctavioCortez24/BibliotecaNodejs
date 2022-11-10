@@ -22,11 +22,11 @@
 }
 
 class Pedido{
-    constructor(prestamo, fechaDevolucion, Libro, Socio, fechaReintegro){
+    constructor(prestamo, fechaDevolucion, libro, socio, fechaReintegro){
         this.prestamo = prestamo;
         this.fechaDevolucion= fechaDevolucion;
-        this.Libro=Libro;
-        this.Socio=Socio;
+        this.libro=libro;
+        this.socio=socio;
         this.fechaReintegro= fechaReintegro;
     }
 

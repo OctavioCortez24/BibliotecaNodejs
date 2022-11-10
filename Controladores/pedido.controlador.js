@@ -11,7 +11,7 @@ controlador.mostrarPedidos = (request, response) => {
     var reitegroLibro="";
     for (var i = 0; i < pedidos.length; i++) {
         reitegroLibro=(pedidos[i].fechaReintegro==null)?"No Devuelto":""+pedidos[i].fechaReintegro;
-        striTable += "<tr class='table-secondary' ><td>" + pedidos[i].prestamo + "</td><td>" + pedidos[i].fechaDevolucion+ "</td><td>" + pedidos[i].Libro.titulo + "</td><td>" + pedidos[i].Socio.dNI+ "</td><td>" + reitegroLibro+ "</td></tr>";
+        striTable += "<tr class='table-secondary' ><td>" + pedidos[i].prestamo + "</td><td>" + pedidos[i].fechaDevolucion+ "</td><td>" + pedidos[i].libro + "</td><td>" + pedidos[i].socio+ "</td><td>" + reitegroLibro+ "</td></tr>";
     }
 
     response.render('./Mostrar Datos/Mostrar-Pedidos',{titulo:'Mostrar Pedidos', pedidos:striTable})
