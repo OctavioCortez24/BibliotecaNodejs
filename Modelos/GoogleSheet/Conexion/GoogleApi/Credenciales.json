@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bibliotecanodejsproyecto",
+  "private_key_id": "2e7051a591153dee8c99b5a9a2f4d0b22b26986a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC28djmCgvhRXYS\n0UpoU3EO4fNG3DVNrtOOX2rhJMAk+XTXFaR6yXRK96Kn1eXQZSj6ME1h06IUH5Zp\n8AHf6eToTeni79SSV5qzjIgPMp+YyEFGkq9J1r3uTOPfBeacvcGPlRhvQDOwb4iE\nb0AzcVn3WEbyq8pC7ymp/l6vNrlQAo1DO5tXIpnJYZkyzmCZtCLI7zHEWg+2zhPv\n4sAyfGdzJVCdPUjgpURSx5GudnrTrsRsT6YmtYRZ1B5k3qY2Tm9G6u0J+1oXPFAS\nMA3h//+l0Zqkd4bsReUU7fCDHKfOLdlCszrVgezuY81yMCkTMDFZM5+rsvsB0nbo\nQWZHUTmbAgMBAAECggEAVcjkR0JQvcp/imVfeboe2razB/g8enfPNgSiLn64Jt5e\nnnjEjtsmT/z85ayUPfshkufRcVz2tG73biegCWo474GReduyFwlDPoxYRKAdXFwS\n18/yqDItD7A4bhzrPXZxbC2irpAxbLtwDYHJXhX59NUNN7+8cVSKee8QYSLNFKnB\naUG8WBha/mVcmoWbqujpxyQWkU0U02XnjzRb2Nap9kfrKrCOAjIwUn7k2jzQ/vZK\n3aANQ5JYwZYfwFg7WTqrRW01WWaCJcf212Uw+t27rLVJhYEVvFUV4keMrZLY4B4U\nKSQURtxgkb9Y5owvM+vhaHkxQbvEXPL3b4eUTLsZ2QKBgQDyRIP74ezwinv6rg4W\nDJqZbJbJ/4LEV8kYtHKLKCgLaZiT0G/k1vBJLcX2PjYQgHvZBG3OAAA4y5A7G9HG\nQEBWBUB7abzROjFdeCwMoSd+FqpU2qHcnunpAP533MxaisRVCHopD/hZytSagmA3\n6uHLumEPWLxbcZO1tr6wuSW4ZwKBgQDBUIMC/6VYaxponSQBAat6g/2XHYmDTBH1\n3dSyHnFs/5ROWeVRa/H0cxfayinySVd5fSq8X2QhOtIxQOdB7jlyFQ2Cn4VOAdIB\nKPsYvG/sIC1CncU19yIjDXNoYSR0l1li+qsu9A6U9lOF9TnuX81mE1vu+WDq8nlQ\nVofRLz4ErQKBgF/jNGX2ZsRR2349c7/QX0RIUWpD4ir6H9LSYN+pFihmNAiVICRv\n2gzsvASZXOatI9eiRB+bqnrQPxbWDPItrgkd7QartBsPsEgxbyXUhwAF0obhPd1H\nXIdnaFBiqNNRRyHsyAUGmCJaAEnjPlgDdDkhXJcpZOvAiVkLqm/h6AcTAoGAAL/N\nIi/XdjZEDe+9+fsFrR3h17oXlFixISDQ+DfB/MgozPzwNJaUg3wGtaRe8T9zhVcE\n2WINQ0u1ENfNjaXctyJ5wO3ZWGoNZE/CWWAxltqxEjcGUqU4jqY4skjeGU2U3RtX\nmoD7pXwm6rf+l3vrkd+1VYHF7GMwMS2ErTzfoqkCgYBTaTvL4nbJKLkAEhVRbpEy\nEjsmDkiN1wXpesvFdDsdbdqtD6suXdNBwVen5M45fr6iUV/yLY1TbhTIQ7QsFmhY\n0szETfd6gdilsH+QN9wlmeetUHqxUHpUZ9u/erYsDffVaDwQW6Ec57YQ6oD/bMLD\n4TeuOlCFRLYzT1Azl6a2zQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "googledriveacceso@bibliotecanodejsproyecto.iam.gserviceaccount.com",
+  "client_id": "109388315838072701969",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googledriveacceso%40bibliotecanodejsproyecto.iam.gserviceaccount.com"
+}
