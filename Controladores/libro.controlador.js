@@ -23,7 +23,7 @@ controlador.darDeBaja = (request, response) => {
             striLibrosSelect += "<option value='" + JSON.stringify(libros[i]) + "'>" + libros[i].titulo + "</option>";
         }
     }
-    response.render('Dar de Baja/Dar-de-baja-un-libro', { titulo: 'Dar de baja un libro',libros:striLibrosSelect });
+    response.render('Dar de baja/Dar-de-baja-un-Socio', { titulo: 'Dar de baja un libro',libros:striLibrosSelect });
 }
 controlador.darDeBajaPost = (request, response) => {
 
